@@ -7,7 +7,7 @@ yarn dev
 
 # Install the package as dev manually
 
-Since this package isn't released for installing so try it out by installing manually
+Since this package hasn't been released on the Google's extension store so the only way to try is to install it manually as following steps:
 
 - Build the package
 
