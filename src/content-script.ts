@@ -1,7 +1,7 @@
 const mainJS = chrome.extension.getURL("main.js");
 const script = document.createElement("script");
 script.setAttribute("type", "module");
-script.setAttribute("src", chrome.extension.getURL("main.js"));
+script.setAttribute("src", mainJS);
 
 // script.textContent = code;
 // spotify ad detection

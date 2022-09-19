@@ -1,10 +1,8 @@
-const path = require("path");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+import * as path from "path";
+import * as CopyWebpackPlugin from "copy-webpack-plugin";
+import * as webpack from "webpack";
 
-/**
- * @type {import('webpack').Configuration}
- */
-const config = {
+const config: webpack.Configuration = {
   mode: "development",
   devtool: "inline-source-map",
   entry: {
@@ -30,18 +28,16 @@ const config = {
         use: "ts-loader",
         exclude: /node_modules/,
       },
-      // {
-      //   test: /\.css$/,
-      //   use: extractCSS.extract([ 'css-loader' ]),
-      // },
     ],
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".css"],
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: "manifest.json" }, { from: "images/*" }]),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "manifest.json" }, { from: "images/*" }],
+    }),
   ],
 };
 
-module.exports = config;
+export default config;
