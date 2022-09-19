@@ -1,0 +1,41 @@
+{
+  "name": "spotify-ext",
+  "version": "1.0.0",
+  "description": "",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "clipboardRead",
+    "https://open.spotify.com/"
+  ],
+  "icons": {
+    "16": "images/yt_16.png",
+    "32": "images/yt_32.png",
+    "48": "images/yt_48.png",
+    "128": "images/yt_128.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://open.spotify.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "main.js"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/yt_16.png",
+      "32": "images/yt_32.png",
+      "48": "images/yt_48.png",
+      "128": "images/yt_128.png"
+    }
+  },
+  "manifest_version": 2
+}
