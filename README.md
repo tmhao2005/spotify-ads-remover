@@ -17,3 +17,5 @@ yarn build
 
 - Open your Chrome extension: `chrome://extensions/`
 - Select `Load unpackaged` and select the `dist/js`
+
+That's it. Now open your `https://open.spotify.com` and enjoy the music without ads even :)
