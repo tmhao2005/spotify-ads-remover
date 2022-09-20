@@ -2,7 +2,6 @@
   "name": "spotify-ads",
   "version": "1.0.0",
   "description": "Helps to remove Spotify ads on Chrome",
-  "main": "index.js",
   "scripts": {
     "dev": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" webpack --config webpack.config.ts --watch",
     "build": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" webpack --config webpack.config.ts",

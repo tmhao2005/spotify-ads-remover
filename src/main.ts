@@ -5,7 +5,7 @@ const halfSecondInMs = 30 * 1000;
 // this is the technique to get the video that spotify init
 // within its code which can't access to
 document.createElement = function (tag: string) {
-  const element = nativeCreateElement.apply(this, [tag]);
+  const element = nativeCreateElement.apply(this, arguments);
   if (tag == "video" || tag == "audio") {
     videoElements.push(element);
   }
@@ -31,8 +31,8 @@ window.onload = function () {
   initialize();
 
   // debug code
-  const timeout = setTimeout(() => {
-    window.spotifyVideos = videoElements;
-    clearInterval(timeout);
-  }, 5000);
+  // const timeout = setTimeout(() => {
+  //   window.spotifyVideos = videoElements;
+  //   clearInterval(timeout);
+  // }, 5000);
 };
